@@ -71,6 +71,17 @@
     display: inherit;
     margin-right: 36px;
 
+    &.active {
+      .header-link__text {
+        color: transparentize($color2, 0);
+
+        + .header-link__border {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
     &__text {
       font-size: 14px;
       font-weight: 600;
