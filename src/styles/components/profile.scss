@@ -1,0 +1,140 @@
+.profile {
+  max-width: 344px;
+  width: 100%;
+  margin-right: 46px;
+
+  @media (max-width: 860px) {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    min-width: 120px;
+    height: 120px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__info {
+    margin-left: 24px;
+  }
+
+  &__name {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    color: $color1;
+  }
+
+  &__nickname {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: $color1;
+  }
+
+  &-edit {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: $color6;
+    cursor: pointer;
+  }
+
+  &-nav {
+    position: relative;
+    margin-left: 20px;
+
+    &__list {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      padding: 24px 0;
+      border-radius: 8px;
+      background-color: transparentize($color4, 0.06);
+
+      @media (max-width: 860px) {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 8px 24px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: transparentize($color3, 0.4);
+      }
+
+      &__icon {
+        margin-right: 16px;
+      }
+
+      &__text {
+        text-align: left;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color2;
+      }
+    }
+
+    &-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &-data {
+    display: flex;
+    margin: 32px -24px 0 -24px;
+
+    &__item {
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    &__name {
+      font-size: 16px;
+      line-height: 24px;
+      color: transparentize($color2, 0.2);
+    }
+
+    &__amount {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $color1;
+    }
+  }
+
+  &__description {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color1;
+  }
+}

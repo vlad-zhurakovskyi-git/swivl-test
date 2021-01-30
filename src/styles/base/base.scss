@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: $color11;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page__content {
+  display: flex;
+  margin: 72px 0;
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+    margin: 36px 0;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+
+  &.checked {
+    .checkbox {
+      &__block {
+        background-color: $color9;
+
+        &:before {
+          left: 19px;
+        }
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    margin: 0 30px;
+    border-radius: 50px;
+    background-color: $color8;
+    transition: all 0.5s ease-in-out;
+
+    &:before {
+      content:'';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      height: 18px;
+      width: 18px;
+      background-color: $color4;
+      border-radius: 50%;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $color2;
+
+
+    &--left {
+      order: -1;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px -12px -12px -12px;
+
+    @media (max-width: 1060px) {
+      margin-top: 24px;
+    }
+  }
+
+  .checkbox {
+    @media (max-width: 1060px) {
+      margin: 24px auto 0 auto;
+    }
+  }
+}
+
+.post {
+  width: 50%;
+
+  @media (max-width: 1060px) {
+    width: 100%;
+  }
+  
+  @media (max-width: 860px) {
+    width: 50%;
+  }
+
+  @media (max-width: 680px) {
+    width: 100%;
+  }
+
+  &__col {
+    padding: 12px;
+  }
+
+  &-item {
+    padding: 24px;
+    background-color: $color4;
+    border-radius: 8px;
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 44px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      font-size: 18px;
+      line-height: 25px;
+      color: $color6;
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 16px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color2;
+
+      &__icon {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-profile {
+    display: flex;
+    align-items: center;
+
+    &__avatar {
+      width: 24px;
+      height: auto;
+      border-radius: 50%;
+      background-color: $color5;
+    }
+
+    &__name {
+      margin-left: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color2;
+    }
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color2;
+
+    &__icon {
+      margin-right: 3px;
+    }
+
+    &__shared {
+      padding: 0 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: $color3;
+      border-radius: 4px;
+    }
+
+    &__text {
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+  }
+
+  &__text {
+    height: 132px;
+    margin-top: 10px;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color2;
+  }
+}

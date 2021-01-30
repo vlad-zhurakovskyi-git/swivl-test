@@ -1,0 +1,117 @@
+.header {
+  width: 100%;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &--top {
+      padding: 20px 0 16px 0;
+    }
+
+    &--bottom {
+      position: relative;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &-profile {
+    display: flex;
+    align-items: center;
+
+    &__name {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.5px;
+      color: $color1;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    &__avatar {
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+
+    &__caret {
+      margin-left: 12px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    margin-left: 17px;
+  }
+
+  &-control {
+    display: inline-flex;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &-link {
+    position: relative;
+    display: inherit;
+    margin-right: 36px;
+
+    &__text {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: transparentize($color2, 0.4);
+      transition: color 0.5s;
+
+      &:hover {
+        color: transparentize($color2, 0);
+
+        + .header-link__border {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__border {
+      content: '';
+      position: absolute;
+      bottom: -22px;
+      width: 100%;
+      height: 4px;
+      background-image: $color10;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.5s, opacity 0.5s;
+    }
+  }
+
+  &-plus {
+    position: absolute;
+    right: 0;
+    bottom: -32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-image: $color10;
+  }
+}
