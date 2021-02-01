@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const navList = [
   {
@@ -24,8 +24,6 @@ const dataList = [
 ];
 
 const Profile = () => {
-  const [isNavList, setNavList] = useState(false);
-
   return (
     <aside className="profile">
       <div className="profile__inner">
@@ -34,11 +32,11 @@ const Profile = () => {
           <div className="profile__header">
             <div className="profile__name">Benjamin Clementine</div>
             <div className="profile-nav">
-              <button onClick={() => setNavList(!isNavList)} className="profile-nav-btn">
+              <button className="profile-nav-btn">
                 <img src="/icons/menu-dots.svg" className="profile-nav-btn__icon" alt="menu"/>
               </button>
 
-              {isNavList && <div className="profile-nav__list">
+              <div className="profile-nav__list">
                 {
                   navList.map(({ icon, text }) => (
                     <button className="profile-nav-item" key={icon} type="button">
@@ -47,7 +45,7 @@ const Profile = () => {
                     </button>
                   ))
                 }
-              </div>}
+              </div>
             </div>
           </div>
           <div className="profile__nickname">@benclementine</div>

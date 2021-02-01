@@ -1,9 +1,10 @@
 .profile {
-  max-width: 344px;
+  min-width: 350px;
   width: 100%;
   margin-right: 46px;
 
   @media (max-width: 860px) {
+    min-width: auto;
     max-width: 520px;
     margin: 0 auto;
   }
@@ -54,11 +55,21 @@
     text-decoration: underline;
     color: $color6;
     cursor: pointer;
+    transition: opacity 0.7s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &-nav {
     position: relative;
-    margin-left: 20px;
+    padding: 0 20px 20px 20px;
+
+    &:hover &__list {
+      opacity: 1;
+      visibility: visible;
+    }
 
     &__list {
       position: absolute;
@@ -67,6 +78,8 @@
       padding: 24px 0;
       border-radius: 8px;
       background-color: transparentize($color4, 0.06);
+      opacity: 0;
+      visibility: hidden;
 
       @media (max-width: 860px) {
         left: auto;
@@ -75,9 +88,8 @@
     }
 
     &-item {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      width: 100%;
       padding: 8px 24px;
       transition: background-color 0.3s;
 
