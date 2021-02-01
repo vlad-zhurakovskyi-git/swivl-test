@@ -8,8 +8,8 @@ function App() {
     <div className="page">
       <Header/>
 
-      <div className="container">
-        <div className="page__content">
+      <div className="page__content">
+        <div className="container">
           <Profile/>
           <Posts/>
         </div>
