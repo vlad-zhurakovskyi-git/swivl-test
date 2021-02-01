@@ -119,6 +119,11 @@
     font-size: 16px;
     line-height: 22px;
     color: $color2;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     &__icon {
       margin-right: 3px;
